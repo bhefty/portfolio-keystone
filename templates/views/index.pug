@@ -1,0 +1,140 @@
+extends ../layouts/default
+
+block content
+	section#cover
+		#cover-caption
+			.container-fluid
+				.row
+					#cover-text.col-sm-8.col-sm-offset-2
+						h1 Bill Hefty
+						p.lead Developing engaging and productive web solutions
+						br
+						a(href='#about', role='button').btn.btn-lg.btn-primary &darr;
+
+	nav#navigation.navbar.navbar-default.navbar-static-top
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='#cover') Bill Hefty
+					.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-right
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							if user
+								if user.canAccessKeystone
+									li: a(href='/keystone') Open Keystone
+								li: a(href='/keystone/signout') Sign Out
+							else
+								li: a(href='/keystone/signin') Sign In
+							
+
+	section#about
+		.feature-content
+			.container
+				.row
+					.col-md-6.hidden-xs.hidden-sm
+						img(src='../images/bill-profile-pic.jpg', alt='Picture of Bill').img-circle
+					.col-md-5.col-md-offset-1
+						h2 About me
+						p.lead
+							| My name is Bill Hefty and I'm a Web Developer. I've had upwards of 5 years experience as an IT professional dealing in all aspects between desktop tech support to video network solutions. This portfolio page aims at keeping track of my progress as I continue my track on web development. Have a look around and feel free to contact me!
+						h5 Connect with me
+						a(href='https://twitter.com/billhefty', target='_blank', rel='noopener', role='button').btn.btn-secondary.btn-sm twitter
+						a(href='https://www.linkedin.com/in/bill-hefty-6b973689', target='_blank', rel='noopener', role='button').btn.btn-secondary.btn-sm linkedin
+						a(href='https://github.com/bhefty', target='_blank', rel='noopener', role='button').btn.btn-secondary.btn-sm github
+
+	section#projects
+		.feature-content.feature-dark
+			.container
+				h2 Projects
+				p.lead Feel free to checkout some of my recent projects!
+				.cards
+					a(href='https://github.com/bhefty/reactive-voting', target='_blank', rel='noopener').card
+						span#project-1.card-header
+							span.card-title
+								h3 React Voting
+						span.card-summary
+							| A voting app built with MongoDB, Express, React, and Node. Complete with user authentication!
+						span.card-meta 
+							| MongoDB - Express - React - Node
+					a(href='https://agile-island-30911.herokuapp.com/', target='_blank', rel='noopener').card
+						span#project-2.card-header
+							span.card-title
+								h3 Recipe Box
+						span.card-summary
+							| A digital recipe box built with React that utilizes the browser's local storage to save state. Part of a FreeCodeCamp project.
+						span.card-meta 
+							| React
+					a(href='https://github.com/bhefty/project_what_have_you_done', target='_blank', rel='noopener').card
+						span#project-3.card-header
+							span.card-title
+								h3 Find-My-Rep
+						span.card-summary
+							| This project centered around the Sunlight Foundation API to retrieve information for your local congressmen and women.
+						span.card-meta 
+							| Express - API - Node
+					a(href='http://codepen.io/bhefty/full/MbawLa/', target='_blank', rel='noopener').card
+						span#project-4.card-header
+							span.card-title
+								h3 Markdown Previewer
+						span.card-summary
+							| This app was created using ReactJS to showcase the benefits of the Virtual DOM. Enter your markdown text on the left and see it instantly compiled on the right.
+						span.card-meta 
+							| React
+					a(href='https://github.com/bhefty/assignment_githuh', target='_blank', rel='noopener').card
+						span#project-5.card-header
+							span.card-title
+								h3 Githuh?
+						span.card-summary
+							| CLI for retreiving information on Github user accounts. Part of the Viking Code School projects.
+						span.card-meta 
+							| API - CLI - Node
+					a(href='https://bhefty.github.io/simon-says/', target='_blank', rel='noopener').card
+						span#project-6.card-header
+							span.card-title
+								h3 Simon Says Game
+						span.card-summary
+							| The classic game revisioned for web! Try to get all the way to round 20 to win. Make it a challenge by enabling 'Strict' mode. Complete with sounds and flashing lights.
+						span.card-meta 
+							| jQuery
+				p.lead.more-link
+					a(href='https://github.com/bhefty', target='_blank', rel='noopener') View more projects
+
+	section#contact.feature-alt
+		.container
+			.row
+				.feature-content
+					.col-md-6.hidden-xs.hidden-sm
+						img(src='../images/ipad-email.jpg', alt='iPad with email icon')
+					.col-md-5.col-md-offset-1
+						h2 Contact me
+						p.lead Feel free to get in touch with me, I'd love to hear from you!
+						a(href='mailto:billhefty@gmail.com', role='button').btn.btn-primary.btn-lg E-mail me
+
+
+//- Original code
+//- block content
+//- 	.container: .jumbotron
+//- 		img(src='/images/logo.svg', width='160')
+//- 		h1 Welcome
+//- 		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+//- 		p It includes the latest versions of
+//- 			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+//- 			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+//- 		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+//- 		hr
+//- 		if user && user.canAccessKeystone
+//- 			p
+//- 				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+//- 		else
+//- 			p We have created a default Admin user for you with the email <strong>billhefty@gmail.com</strong> and the password <strong>admin</strong>.
+//- 			p
+//- 				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+//- 				|  to use the Admin UI.
+//- 		hr
+//- 		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+//- 			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
