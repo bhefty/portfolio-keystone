@@ -27,6 +27,13 @@ keystone.init({
 	'cloudinary prefix': 'portfolio',
 	'cloudinary folders': true,
 	'cloudinary secure': true,
+
+	'wysiwyg override toolbar': true,
+	'wysiwyg additional options': {
+		// 'width': 700,
+		'plugins': 'advlist, lists, code, preview, link, image, wordcount, autolink, autoresize, autosave, hr',
+		'toolbar': 'restoredraft | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | code | preview',
+	},
 });
 
 // Load your project's Models
