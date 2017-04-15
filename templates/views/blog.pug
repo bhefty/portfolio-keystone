@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 mixin post(post)
-	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+	.post.blog-post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		if post.image.exists
 			a(href='/blog/post/' + post.slug)
 				img(src=post._.image.crop(875,321, {gravity: "auto:face", quality: "auto:good", format: "jpg"})).img-responsive.img-hero

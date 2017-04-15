@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
 html,
 body {
   height: 100%;
@@ -230,12 +231,42 @@ img {
   text-align: center;
 }
 
+.blog-post {
+  :nth-child(5) {
+    font-size: 2rem;
+  }
+}
+
 .post {
   margin-bottom: 8rem;
   h2 {
     font-size: 5rem;
   }
-  :nth-child(5) {
-    font-size: 2rem;
+}
+
+.post-content {
+  padding: 39px 0;
+  overflow: hidden;
+}
+
+.post-header {
+  padding: 8rem 0 0;
+  background-color: #262f36;
+  text-align: center;
+  img {
+    padding-top: 4rem;
+  }
+  h1 {
+    font-family: 'News Cycle', sans-serif;
+    @media (min-width: 768px) {
+      font-size: 78px;
+    }
+    color: white;
+  }
+  h5 {
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+    color: #aaa;
   }
 }
