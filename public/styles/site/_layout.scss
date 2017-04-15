@@ -221,3 +221,21 @@ img {
 #project-6 {
   background-image: url('../images/project-simon-says.jpg');
 }
+
+.img-hero {
+  width: 100%;
+}
+
+.blog-content {
+  text-align: center;
+}
+
+.post {
+  margin-bottom: 8rem;
+  h2 {
+    font-size: 5rem;
+  }
+  :nth-child(5) {
+    font-size: 2rem;
+  }
+}
