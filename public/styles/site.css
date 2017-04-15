@@ -6102,6 +6102,11 @@ img {
   .post h2 {
     font-size: 5rem; }
 
+.article-text {
+  color: #666766;
+  font-size: 18px;
+  line-height: 28px; }
+
 .post-content {
   padding: 39px 0;
   overflow: hidden; }

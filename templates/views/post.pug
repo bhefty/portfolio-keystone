@@ -24,7 +24,7 @@ block content
 			if !data.post
 				h2 Invalid Post.
 			else
-				.post
+				.post.article-text
 					!= data.post.content.full
 			hr
 			p: a(href='/blog') &larr; back to the blog
