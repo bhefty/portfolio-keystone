@@ -6107,11 +6107,12 @@ img {
   overflow: hidden; }
 
 .post-header {
-  padding: 8rem 0 0;
+  padding: 8rem 0 4rem 0;
   background-color: #262f36;
   text-align: center; }
   .post-header img {
-    padding-top: 4rem; }
+    padding-top: 4rem;
+    margin-bottom: -5rem; }
   .post-header h1 {
     font-family: 'News Cycle', sans-serif;
     color: white; }

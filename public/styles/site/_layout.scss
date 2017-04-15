@@ -250,11 +250,12 @@ img {
 }
 
 .post-header {
-  padding: 8rem 0 0;
+  padding: 8rem 0 4rem 0;
   background-color: #262f36;
   text-align: center;
   img {
     padding-top: 4rem;
+    margin-bottom: -5rem;
   }
   h1 {
     font-family: 'News Cycle', sans-serif;
