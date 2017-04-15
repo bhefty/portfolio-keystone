@@ -23,6 +23,10 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
+	'cloudinary prefix': 'portfolio',
+	'cloudinary folders': true,
+	'cloudinary secure': true,
 });
 
 // Load your project's Models
