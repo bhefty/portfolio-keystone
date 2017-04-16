@@ -6094,6 +6094,11 @@ img {
 .blog-content {
   text-align: center; }
 
+.project-content {
+  text-align: center; }
+  .project-content .project-container {
+    padding-top: 6rem; }
+
 .blog-post :nth-child(5) {
   font-size: 2rem; }
 
