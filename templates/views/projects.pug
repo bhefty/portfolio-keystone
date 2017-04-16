@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block intro
+	.container-fluid.post-header
+		h1 Projects
+
+block content
+	.container.blog-content
+		a(href='https://github.com/bhefty/reactive-voting', target='_blank' rel='noopener')
+			img(src='https://res.cloudinary.com/bhefty/image/upload/v1492310086/portfolio/projects/react-voting.jpg', alt='React Voting App')
+		h2: a(href='https://github.com/bhefty/reactive-voting', target='_blank' rel='noopener') React Voting
+		p.lead
+			| A voting app built with MongoDB, Express, React, and Node. Complete with user authentication!
